@@ -2,6 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Shortener, type: :model do
 
+  include ShortenersHelper
+
   subject {described_class.new(
     link: "https://google.com",
     code: "8hgY68v"
@@ -12,9 +14,9 @@ RSpec.describe Shortener, type: :model do
     expect(subject).not_to be_valid
   end
 
-  it "invalid without code" do
-    #subject.code = nil
-    #expect(subject).not_to be_valid
+  it "should show code" do
+    #subject.code = short_it(subject.link)
+    #expect(subject.code.length).to be(7)
   end
 
 end

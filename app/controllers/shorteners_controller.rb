@@ -9,7 +9,7 @@ class ShortenersController < ApplicationController
     if @shortener.save
       redirect_to shorteners_path(@shortener)
     else
-      render :new
+      render :index
     end
   end
 
@@ -17,8 +17,8 @@ class ShortenersController < ApplicationController
   end
 
   def show
-    binding.pry
-    @shortener = Shortener.find(params[:format])
+    url = Shortener.find_by(code: params[:id])
+    redirect_to url.link
   end
 
   private
