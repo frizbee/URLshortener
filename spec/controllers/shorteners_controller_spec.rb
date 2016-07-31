@@ -18,6 +18,11 @@ RSpec.describe ShortenersController, type: :controller do
     it "renders form template" do
       expect(subject).to render_template(partial: "_form")
     end
+
+    it "has shortener instance variable" do
+      get :index
+      expect(assigns(:shortener)).not_to be_nil
+    end
   end
 
 

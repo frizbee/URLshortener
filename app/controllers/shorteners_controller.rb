@@ -1,5 +1,6 @@
 class ShortenersController < ApplicationController
   def index
+    @shortener = Shortener.new
   end
 
   def new

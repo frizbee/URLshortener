@@ -1,0 +1,7 @@
+<%= form_for @shortener do |f| %>
+  <div class="input-field">
+    <%= f.text_field :link, class: "validate" %>
+    <%= f.label :link %>
+  </div>
+
+<% end %>
