@@ -5,12 +5,14 @@
   </div>
 </div>
 
+<% if params[:link] %>
 <div class="row">
   <div class="col s12 m8 l8 offset-m2 offset-l2">
 
     <div class="link">
-      <%= @link %>
+      <span>Copy your link:</span> <strong><%= @link %></strong>
     </div>
 
   </div>
 </div>
+<% end %>

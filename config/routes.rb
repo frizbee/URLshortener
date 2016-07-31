@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get "/:id" => "shortener#show"
+  get "/:id" => "shorteners#show"
   resource :shorteners, only: [:index, :create]
   root "shorteners#index"
 

@@ -1,7 +1,7 @@
 class ShortenersController < ApplicationController
   def index
     @shortener = Shortener.new
-    @link = URI::join("http://"+request.host, params[:link])
+    @link = URI::join("http://"+request.host, params[:link]) if params[:link]
   end
 
   def create
