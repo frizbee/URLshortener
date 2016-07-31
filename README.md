@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -22,3 +23,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+=======
+# URLshortener
+yet another url shortener
+>>>>>>> 1a65222f7477de857d226d399cd4db184c46b3fb
