@@ -1,13 +1,14 @@
 class ShortenersController < ApplicationController
   def index
     @shortener = Shortener.new
+    @link = URI::join("http://"+request.host, params[:link])
   end
 
   def create
     @shortener = Shortener.new(shortener_params)
 
     if @shortener.save
-      redirect_to shorteners_path(@shortener)
+      redirect_to root_path(link: @shortener.code)
     else
       render :index
     end

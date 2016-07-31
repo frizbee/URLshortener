@@ -2,6 +2,8 @@ require 'rails_helper'
 
 RSpec.feature "make shorten url" do
 
+  include ShortenersHelper
+
   scenario " allow to make shorten url" do
     visit root_path
 
@@ -9,6 +11,6 @@ RSpec.feature "make shorten url" do
 
     click_on "Submit"
 
-    expect(page).to have_content("https://google.com")
+    expect(page).to have_content("your")
   end
 end
