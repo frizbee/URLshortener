@@ -5,7 +5,8 @@ RSpec.describe ShortenersController, type: :controller do
   describe "GET #index" do
 
     render_views
-    subject { get :index }
+
+    subject { get :index, params: { link: "9876543" } }
 
     it "returns http success" do
       expect(response.status).to eq(200)
@@ -20,7 +21,7 @@ RSpec.describe ShortenersController, type: :controller do
     end
 
     it "has shortener instance variable" do
-      get :index
+      get :index, params: { link: "asdfasdf" }
       expect(assigns(:shortener)).not_to be_nil
     end
   end
