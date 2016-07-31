@@ -6,6 +6,6 @@ class Shortener
   field :link, type: String
   field :code, type: String
 
-  validates_presence_of :link, :code
+  validates_presence_of :link
 
 end
