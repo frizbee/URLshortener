@@ -3,39 +3,47 @@ require 'rails_helper'
 RSpec.describe ShortenersController, type: :controller do
 
   describe "GET #index" do
+
+    render_views
+    subject { get :index }
+
     it "returns http success" do
-      get :index
       expect(response.status).to eq(200)
     end
 
     it "renders template index" do
-      get :index
-      expect(response).to render_template(:index)
+      expect(subject).to render_template(:index)
+    end
+
+    it "renders form template" do
+      expect(subject).to render_template(partial: "_form")
     end
   end
 
+
   describe "GET #new" do
+    subject { get :new }
     it "returns http success" do
-      get :new
       expect(response.status).to eq(200)
     end
 
     it "renders template new" do
-      get :new
-      expect(response).to render_template(:new)
+      expect(subject).to render_template(:new)
     end
   end
 
+
   describe "GET #show" do
+    subject { get :show }
     it "returns http success" do
-      get :show
       expect(response.status).to eq(200)
     end
 
     it "renders template show" do
-      get :show
-      expect(response).to render_template(:show)
+      expect(subject).to render_template(:show)
     end
   end
+
+
 
 end
