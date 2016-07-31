@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Shortener, type: :model do
-  #pending "add some examples to (or delete) #{__FILE__}"
+
   subject {described_class.new(
     link: "https://google.com",
     code: "8hgY68v"
@@ -16,4 +16,5 @@ RSpec.describe Shortener, type: :model do
     subject.code = nil
     expect(subject).not_to be_valid
   end
+
 end
