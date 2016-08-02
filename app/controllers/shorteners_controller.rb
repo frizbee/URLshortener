@@ -5,6 +5,7 @@ class ShortenersController < ApplicationController
   end
 
   def create
+    # TODO find or initialize by instead of new
     @shortener = Shortener.new(shortener_params)
 
     if @shortener.save
