@@ -5,8 +5,7 @@ class ShortenersController < ApplicationController
   end
 
   def create
-    # TODO find or initialize by instead of new
-    @shortener = Shortener.new(shortener_params)
+    @shortener = Shortener.find_or_initialize_by(shortener_params)
 
     if @shortener.save
       redirect_to root_path(link: @shortener.code)

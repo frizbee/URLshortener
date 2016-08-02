@@ -11,6 +11,7 @@ RSpec.feature "make shorten url" do
 
     click_on "Submit"
 
-    expect(page).to have_content("your")
+    expect(page).to have_content("Copy your link")
   end
+
 end
