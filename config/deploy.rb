@@ -3,7 +3,7 @@ lock '3.5.0'
 
 set :application, 'shortener'
 set :user, 'frizbee'
-set :repo_url, 'git@example.com:frizbee/URLshortener.git'
+set :repo_url, 'git@github.com:frizbee/URLshortener.git'
 
 set :branch, "master"
 set :deploy_to, "/home/#{fetch(:user)}/www/#{fetch(:application)}"
